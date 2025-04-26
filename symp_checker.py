@@ -87,3 +87,4 @@ print(f"accuracy {accuracy}")
 def predict_disease(user_symptoms):
     # Normalize input symptoms (strip, lowercase, and replace spaces with underscores)
     user_symptoms = [symptom.strip().lower().replace(" ", "_") for symptom in user_symptoms]
+
