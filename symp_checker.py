@@ -104,3 +104,10 @@ def predict_disease(user_symptoms):
     prediction = svm_model.predict(input_df)[0]
     
     print("\n Based on the symptoms you provided, the predicted disease is:", prediction)
+    
+# Get symptoms from the user
+def get_user_input():
+    print("\nPlease enter symptoms separated by commas (e.g., chest_pain, shortness_of_breath):")
+    user_input = input("Enter your symptoms: ")
+    user_symptoms = user_input.split(",")  # Split by commas to create a list of symptoms
+    return user_symptoms
