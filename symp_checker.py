@@ -99,3 +99,8 @@ def predict_disease(user_symptoms):
             print(f"Warning: '{symptom}' not recognized as a valid symptom.")
 # Convert input data to a DataFrame (same format as the model input)
     input_df = pd.DataFrame([input_data], columns=X.columns)
+
+    # Predict the disease
+    prediction = svm_model.predict(input_df)[0]
+    
+    print("\n Based on the symptoms you provided, the predicted disease is:", prediction)
