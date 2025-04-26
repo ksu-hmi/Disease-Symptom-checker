@@ -48,15 +48,15 @@ print(f"Validation set size {X_test.shape[0]}")
 
 # Train an SVM (Support Vector Machine) model
 from sklearn.svm import SVC
-rf=SVC(kernel='rbf',random_state=0)
-rf = rf.fit(X_train, Y_train)
+svm_model=SVC(kernel='rbf',random_state=0)
+svm_model = svm_model.fit(X_train, Y_train)
 
 # Evaluate training accuracy
-confidence = rf.score(X_test, Y_test)
+confidence = svm_model.score(X_test, Y_test)
 print(f"Training Accuracy {confidence}")
 
 # Make predictions on validation set
-Y_pred = rf.predict(X_test)
+Y_pred = svm_model.predict(X_test)
 print(f"Validation Prediction {Y_pred}")
 
 # Calculate validation accuracy
@@ -69,11 +69,11 @@ print(f"confusion matrix {conf_mat}")
 clf_report = classification_report(Y_test, Y_pred)
 
 # Perform cross-validation with 3 folds
-score = cross_val_score(rf, X_test, Y_test, cv=3)
+score = cross_val_score(svm_model, X_test, Y_test, cv=3)
 print(score)
 
 # Final model prediction and accuracy
-result = rf.predict(X_test)
+result = svm_model.predict(X_test)
 accuracy = accuracy_score(Y_test, result)
 clf_report = classification_report(Y_test, result)
 print(f"accuracy {accuracy}")
