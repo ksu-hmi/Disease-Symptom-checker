@@ -97,3 +97,5 @@ def predict_disease(user_symptoms):
             input_data[index] = 1  # Set the corresponding index to 1 (symptom present)
         else:
             print(f"Warning: '{symptom}' not recognized as a valid symptom.")
+# Convert input data to a DataFrame (same format as the model input)
+    input_df = pd.DataFrame([input_data], columns=X.columns)
