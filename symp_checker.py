@@ -51,7 +51,7 @@ print(f"Validation set size {X_test.shape[0]}")
 
 # Train an SVM (Support Vector Machine) model
 from sklearn.svm import SVC
-svm_model=SVC(kernel='rbf',random_state=0)
+svm_model=SVC(kernel='rbf',random_state=0, probability=True)
 svm_model = svm_model.fit(X_train, Y_train)
 
 # Evaluate training accuracy
@@ -80,3 +80,10 @@ result = svm_model.predict(X_test)
 accuracy = accuracy_score(Y_test, result)
 clf_report = classification_report(Y_test, result)
 print(f"accuracy {accuracy}")
+
+# Adding user interaction to input symptoms and predict the disease
+
+# Function to preprocess user input and make a prediction
+def predict_disease(user_symptoms):
+    # Normalize input symptoms (strip, lowercase, and replace spaces with underscores)
+    user_symptoms = [symptom.strip().lower().replace(" ", "_") for symptom in user_symptoms]
