@@ -89,3 +89,11 @@ def predict_disease(user_symptoms):
     user_symptoms = [symptom.strip().lower().replace(" ", "_") for symptom in user_symptoms]
     input_data = np.zeros(len(X.columns))  # X.columns has the feature names
 
+
+    # Map symptoms to corresponding feature indices
+    for symptom in user_symptoms:
+        if symptom in X.columns:
+            index = X.columns.get_loc(symptom)  # Get the index of the symptom in the feature set
+            input_data[index] = 1  # Set the corresponding index to 1 (symptom present)
+        else:
+            print(f"Warning: '{symptom}' not recognized as a valid symptom.")
