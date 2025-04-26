@@ -10,3 +10,14 @@ I used SVC for classification and my model is giving a 100 percent accuracy, whi
 
                         Project Overview:
 This project focuses on developing an AI-powered tool that predicts possible diseases based on the symptoms provided by the user. It aims to assist individuals, parents, elderly patients, medical professionals, and health enthusiasts in assessing the severity of symptoms and suggesting the next steps for care.
+
+                        Key Features
+Symptom input via an easy-to-use interface.
+
+Disease prediction based on trained AI models.
+
+Severity assessment and recommendations for next actions.
+
+Access to reliable health information and resources.
+
+Powered by trusted medical databases for evidence-based results.
