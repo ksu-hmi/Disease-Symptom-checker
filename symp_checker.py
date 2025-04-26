@@ -11,6 +11,9 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 
+# List of critical symptoms that need urgent care
+critical_symptoms = ['chest_pain', 'shortness_of_breath', 'severe_headache', 'unconsciousness']
+
 # Load the dataset
 data = pd.read_csv('Training.csv')
 data # Display the dataset
