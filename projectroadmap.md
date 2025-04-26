@@ -1,4 +1,4 @@
-1. Found a related project and a working code
+1. Found a related project and a working code an described below what it does: 
 
 
                1. Imported Libraries => Done              
