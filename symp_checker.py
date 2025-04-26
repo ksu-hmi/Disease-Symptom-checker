@@ -111,3 +111,7 @@ def get_user_input():
     user_input = input("Enter your symptoms: ")
     user_symptoms = user_input.split(",")  # Split by commas to create a list of symptoms
     return user_symptoms
+
+user_symptoms = get_user_input()  # Get symptoms from the user
+predict_disease(user_symptoms)  # Predict the disease
+
