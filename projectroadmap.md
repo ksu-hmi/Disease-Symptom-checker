@@ -3,15 +3,25 @@
 
                1. Imported Libraries => Done              
 numpy (np): Supports numerical operations, array handling, and mathematical functions.
+
 pandas (pd): Used for data manipulation and analysis; essential for loading the dataset and handling data frames.
+
 seaborn (sns): Data visualization library; useful for making statistical graphics and visualizing relationships within the data.
+
 matplotlib.pyplot (plt): Plotting library; creates static, animated, and interactive visualizations.
+
 sklearn.model_selection.train_test_split:  Splits the dataset into training and testing sets.
+
 sklearn.model_selection.cross_val_score: Performs cross-validation to evaluate the model's performance across multiple subsets of the data.
+
 sklearn.metrics.accuracy_score: Calculates the model's accuracy by comparing true and predicted labels.
+
 sklearn.metrics.confusion_matrix: Builds a confusion matrix to visualize prediction errors.
+
 sklearn.metrics.classification_report: Generates a report that includes precision, recall, F1-score, and support metrics.
+
 sklearn.ensemble.RandomForestClassifier: (Initially imported) Used for training Random Forest models; however, not used in the final training — replaced by SVC.
+
 pickle: Enables saving (serializing) trained machine learning models to a file for later use.
                
                 2. Data Collection   => Done 
