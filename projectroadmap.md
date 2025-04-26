@@ -1,4 +1,4 @@
-1 Found a related project and python code  => Done 
+                                
                                         1. Data Collection   => Done 
 File Used: Training.csv
 Action: Loaded the dataset containing symptoms and corresponding disease prognosis labels.
