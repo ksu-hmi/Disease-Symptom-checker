@@ -4,6 +4,8 @@ Sprint 1:
 2. Post a brief information about the project on Teams Projects Spreadsheet. ✅ Done
 3. Welcome people who are working on same topic to join my team. ✅ Done
 4. Found a related project and a working code an described below what it does: => ✅ Done
+
+   
                1. Imported Libraries:              
 numpy (np): Supports numerical operations, array handling, and mathematical functions.
 
