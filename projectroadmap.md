@@ -69,3 +69,26 @@ Evaluated performance using:
 
 Sprint 2:
 
+1. Add  comments to the original code to make it more readable and understandable =>✅ Done
+2. Add user interaction: Allow users to manually input their symptoms. =>✅ Done
+3. Created predict_disease(user_symptoms) function =>✅ Done
+
+Converts user-provided symptoms into the model's input format.
+
+Predicts the disease based on input symptoms using the trained SVM model.
+
+4. Critical symptoms detection:  =>✅ Done
+Introduced a list of critical symptoms (e.g., chest_pain, shortness_of_breath, severe_headache, unconsciousness).
+Checks if user input contains any critical symptoms and warns the user to seek immediate medical attention.
+
+
+5. Input normalization:  =>✅ Done
+
+Processes user input by converting symptoms to lowercase and replacing spaces with underscores to match feature names in the dataset.
+
+6. User feedback improvements:  =>✅ Done
+
+Added warning messages if unrecognized symptoms are entered.
+
+Listed available valid symptoms when invalid input is detected.
+
