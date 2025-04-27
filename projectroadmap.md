@@ -64,8 +64,8 @@ Evaluated performance using:
     Cross-Validation Score (3-fold)
 
 
-4. Edit the Readme.md file => ✅ Done
-5. 3. Creat a Project Roadmap file =>✅ Done
+5. Edit the Readme.md file => ✅ Done
+6. Create a Project Roadmap file =>✅ Done
 
 Sprint 2:
 
@@ -78,7 +78,9 @@ Converts user-provided symptoms into the model's input format.
 Predicts the disease based on input symptoms using the trained SVM model.
 
 4. Critical symptoms detection:  =>✅ Done
+   
 Introduced a list of critical symptoms (e.g., chest_pain, shortness_of_breath, severe_headache, unconsciousness).
+
 Checks if user input contains any critical symptoms and warns the user to seek immediate medical attention.
 
 
