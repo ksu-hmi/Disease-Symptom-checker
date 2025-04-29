@@ -11,9 +11,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 from sklearn.ensemble import RandomForestClassifier
 import pickle
 
-# List of critical symptoms that need urgent care
-critical_symptoms = ['chest_pain', 'shortness_of_breath', 'severe_headache', 'unconsciousness']
-
 # Load the dataset
 data = pd.read_csv('Training.csv')
 data # Display the dataset
@@ -58,6 +55,7 @@ svm_model = svm_model.fit(X_train, Y_train)
 confidence = svm_model.score(X_test, Y_test)
 print(f"Training Accuracy {confidence}")
 
+critical_symptoms = ['chest_pain', 'shortness_of_breath', 'severe_headache', 'unconsciousness']
 # Make predictions on validation set
 Y_pred = svm_model.predict(X_test)
 print(f"Validation Prediction {Y_pred}")
@@ -104,7 +102,10 @@ def predict_disease(user_symptoms):
     prediction = svm_model.predict(input_df)[0]
     
     print("\n Based on the symptoms you provided, the predicted disease is:", prediction)
-    
+
+   # List of critical symptoms that need urgent care
+
+
 # Get symptoms from the user
 def get_user_input():
     print("\nPlease enter symptoms separated by commas (e.g., chest_pain, shortness_of_breath):")
@@ -112,6 +113,23 @@ def get_user_input():
     user_symptoms = user_input.split(",")  # Split by commas to create a list of symptoms
     return user_symptoms
 
+# Check for critical symptoms
+def check_critical_symptoms(user_symptoms):
+    urgent = [symptom for symptom in user_symptoms if symptom in critical_symptoms]
+    if urgent:
+        print("\n  WARNING: Critical symptom(s) detected:", ', '.join(urgent))
+        print("Please seek immediate medical attention.\n")
+    else:
+        print(f"Warning: '{user_symptoms}' not recognized.")
+        print("Available symptoms are:")
+        available_symptoms = [symptom.replace('_', ' ').title() for symptom in X.columns]
+        for s in available_symptoms:
+            print(f"- {s}")
+
+
+
 user_symptoms = get_user_input()  # Get symptoms from the user
 predict_disease(user_symptoms)  # Predict the disease
+check_critical_symptoms(user_symptoms)
+predict_disease(user_symptoms)
 
