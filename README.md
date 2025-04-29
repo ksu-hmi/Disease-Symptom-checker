@@ -1,3 +1,8 @@
+# Disclaimer:
+Please do not rely on this to make your final decision if you are not feeling well because I am still working on this code so this can not be reliable for taking madical decision at the moment. 
+
+Also, I forked the code  and the training.csv data from Ravi6996. I worked on adding more functionality to the code.
+
 # Symptom-Checker
 This model predicts the disease by providing different symptoms
                       
