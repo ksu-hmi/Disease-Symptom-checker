@@ -131,5 +131,5 @@ def check_critical_symptoms(user_symptoms):
 user_symptoms = get_user_input()  # Get symptoms from the user
 predict_disease(user_symptoms)  # Predict the disease
 check_critical_symptoms(user_symptoms)
-predict_disease(user_symptoms)
+
 
