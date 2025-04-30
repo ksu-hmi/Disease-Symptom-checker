@@ -93,8 +93,7 @@ def predict_disease(user_symptoms):
         if symptom in X.columns:
             index = X.columns.get_loc(symptom)  # Get the index of the symptom in the feature set
             input_data[index] = 1  # Set the corresponding index to 1 (symptom present)
-        else:
-            print(f"Warning: '{symptom}' not recognized as a valid symptom.")
+
 # Convert input data to a DataFrame (same format as the model input)
     input_df = pd.DataFrame([input_data], columns=X.columns)
 
@@ -120,7 +119,7 @@ def check_critical_symptoms(user_symptoms):
         print("\n  WARNING: Critical symptom(s) detected:", ', '.join(urgent))
         print("Please seek immediate medical attention.\n")
     else:
-        print(f"Warning: '{user_symptoms}' not recognized.")
+        print(f"Please note: The symptoms '{user_symptoms}' you entered is not critical and you can find other symptoms below.")
         print("Available symptoms are:")
         available_symptoms = [symptom.replace('_', ' ').title() for symptom in X.columns]
         for s in available_symptoms:
